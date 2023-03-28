@@ -1,0 +1,9 @@
+{
+
+    "name": "cpf/speedio",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
