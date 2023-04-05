@@ -1,7 +1,7 @@
 <?php
 
 //INCLUIR AUTOLOAD
-require __DIR__. '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 
 //IMPORTA SPEEDIO
@@ -25,27 +25,27 @@ if (empty($resultado)) {
 
 //VERIFICAR ERRO DA REQUISIÇÃO 
 if (isset($resultado['error'])) {
-   die($resultado['error']);///se for erro imprime conteudo do erro
+    die($resultado['error']); ///se for erro imprime conteudo do erro
 }
 
 
 //IMPRIME O DADOS DE SUCESSO
 
-echo "CNPJ: " .$cnpj."\n";
-echo "RAZAO SOCIAL: " .$resultado['RAZAO SOCIAL']."\n";
-echo "NOME FANTASIA: " .$resultado['NOME FANTASIA']."\n";
-echo "CEP: " .$resultado['CEP']."\n";
-echo "DATA ABERTURA: " .$resultado['DATA ABERTURA']."\n";
-echo "DATA ABERTURA: " .$resultado['DDD']."\n";
-echo "TELEFONE: " .$resultado['TELEFONE']."\n";
-echo "EMAIL: " .$resultado['EMAIL']."\n";
-echo "LOGRADOURO: " .$resultado['LOGRADOURO']."\n";
-echo "BAIRRO: " .$resultado['BAIRRO']."\n";
-echo "MUNICIPIO: " .$resultado['MUNICIPIO']."\n";
-echo "UF: " .$resultado['UF']."\n";
+// echo "CNPJ: " . $cnpj . "\n";
+// echo "RAZAO SOCIAL: " . $resultado['RAZAO SOCIAL'] . "\n";
+// echo "NOME FANTASIA: " . $resultado['NOME FANTASIA'] . "\n";
+// echo "CEP: " . $resultado['CEP'] . "\n";
+// echo "DATA ABERTURA: " . $resultado['DATA ABERTURA'] . "\n";
+// echo "DATA ABERTURA: " . $resultado['DDD'] . "\n";
+// echo "TELEFONE: " . $resultado['TELEFONE'] . "\n";
+// echo "EMAIL: " . $resultado['EMAIL'] . "\n";
+// echo "LOGRADOURO: " . $resultado['LOGRADOURO'] . "\n";
+// echo "BAIRRO: " . $resultado['BAIRRO'] . "\n";
+// echo "MUNICIPIO: " . $resultado['MUNICIPIO'] . "\n";
+// echo "UF: " . $resultado['UF'] . "\n";
+
+$json = json_encode($resultado);
+
+print_r($json);
+
 exit;
-
-
-
-
-
