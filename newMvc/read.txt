@@ -1,0 +1,97 @@
+
+Funcionamento de mvc
+M-MODEL-> Serve para tarbalha com banco de dados
+V-VIEW ->Serve para trabalhar templetes que layto da tela
+C-CONTROLLER -> serve para geranciar model e view (Serve para gerancia o meu regra de negocio(toda logica sera aqui))
+
+Ex: https://devcurso.com.br/curso/php
+-curso-> é controlado
+-show-é acão(metodo)
+-php-paramatero
+-12-> é parametro requisitado
+-----------------------------------
+
+index - Quando carrega o controlador e não passo o metodo
+Ex: https://devcurso.com.br/curso
+
+show - Quando quero pegar um registro em especifico
+Ex: https://devcurso.com.br/curso/show/php
+
+edit - Mostra formulario para editar/atualizar
+Ex: https://devcurso.com.br/curso/edit/12
+
+update - Atualiza o registro do banco
+Ex: https://devcurso.com.br/curso/update/12
+
+create - mostrar o formulario para cadastrar um registro
+Ex: https://devcurso.com.br/curso/create
+
+store - Cadastrar registro no banco
+Ex: https://devcurso.com.br/curso/store
+
+destroy - deletar o registro do banco ou logoute do sistema
+Ex: https://devcurso.com.br/curso/destroy/12
+
+
+--------------#02------------------------------
+-----------------------------------------------
+1.ESTRURA DE PROJETO(CRIAÇÃO DE DIR)
+ #mewMvc
+   *public
+    **assets
+     ***css
+     ***pages
+     ***js
+    **index.php
+   *app
+    **controllers
+    **models
+    **viwes
+    **traits
+    **classes
+    **functions
+*config.php
+*composer.php
+*boostrap.php
+
+
+Resumo:
+ *public(fica meu arquivos externos)
+ *app(fica meu mvc)
+ *core(fica raiz de projeto)
+ *config.php(conficçao do app)
+ *composer.json(dependencias e autolod)
+ *boostrap.php(função )
+
+2.CRIAÇÃO DE COMPOSER
+2.1 copia e cola no compose.json
+    {
+      "autoload": {
+        "psr-4": {
+          "app\\": "app",
+          "core\\": "core"
+        }
+      }
+    }
+ 
+2.2 run composer dump-autoload -o
+2.3 composer require
+2.4 twig
+2.0 e 1
+
+3.importar helper.php e index.php no boostrap.php
+    -app/function/helpers.php
+    -public/index.php
+
+
+4.1.Criar Controllers/Method/Parameters
+  -index.php(Instancia controllers, method, parameters)
+  -Cria(core/Controller.php)
+  -Cria(app/classes/Uri.php(/curso/php))
+     
+4.2.Run php
+ -dd(\app\classes\Uri::uri());//verificaçao
+ -php -S localhost:8888 -t public
+ -criar metodos Home no controller
+   -isHome()
+   -load()
